@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form method="POST" action="/registrar" class="form-box">
+            <label>Email:</label>
+            <input type="text" name="email" placeholder="Digite seu email" required>
+            
+            <label>Senha:</label>
+            <input type="password" name="senha" placeholder="Crie uma senha" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        {% if mensagem %}
+            <p class="mensagem">{{ mensagem }}</p>
+        {% endif %}
+
+        <p class="link">Já tem conta? <a href="/">Faça login</a></p>
+    </div>
+</body>
+</html>

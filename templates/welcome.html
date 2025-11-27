@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>{{ mensagem }}</h2>
+        <p>Você acessou o sistema com sucesso!</p>
+
+        <div class="actions">
+            <a href="/" class="btn">Sair</a>
+            <a href="/cadastro" class="btn secondary">Cadastrar novo usuário</a>
+        </div>
+    </div>
+</body>
+</html>
