@@ -6,10 +6,7 @@ def step_impl(context, status):
 
 @then('a mensagem "{mensagem}"')
 def step_impl(context, mensagem):
-    # funciona tanto para JSON quanto para HTML
     try:
-        # se a resposta for JSON
         assert context.response.json()["mensagem"] == mensagem
     except:
-        # se a resposta for HTML
         assert mensagem in context.response.text
